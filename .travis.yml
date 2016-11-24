@@ -1,0 +1,29 @@
+branches:
+  only:
+  - master
+language: node_js
+sudo: false
+node_js: stable
+cache:
+  directories:
+  - node_modules
+before_install:
+- git config --global user.name "Dylan"
+- git config --global user.email "dylanninin@gmail.com"
+- git clone --branch gh-pages https://github.com/dylanninin/getreverie dist
+install:
+- npm install
+script:
+- npm run build
+after_script:
+- cd dist
+- echo "getreverie.com" > CNAME
+- cp index.html 404.html
+- git add --all .
+- git commit --message "Automatically update from travis-ci"
+- git version
+- git push "https://${GH_TOKEN}@${GH_REF}" gh-pages:gh-pages > /dev/null 2>&1
+env:
+  global:
+  - GH_REF: github.com/dylanninin/getreverie
+  - secure: nhjlJuXRsN6uqJNYfb/caJZrX0nSg2EIaxgDCY9d/2vPzV2hmeIObK0zrZ//lVb4QbOuDjMTpjzvh6AxUTSJnvZyVXgpHdVnaLmEQupsQX5F4VmFMSptmRfodHnCPZuB3tJHnm9IY7425vZ67SQYl/KGJDj+ahbqVekRr2mS+FaKUwnabBQLa1LqxPzt8LYYpmUU6vcHMnqqpOha9ZB+vGuwNmOVYRQkXRgViVj9/kdh1JozEF2CBqtsRf/q3M+h/xXgfMIPAxaEqJ5o0i32G4sACWi3C+4dgpBvFDU/H6hgIH0DSxfwiwoq2AWBLbxXieeGzCcCCaoPsGrYURAQfKw9iK83L/T7YVDQlZYVyrzswSbitStwL2re3YEiohfqIC4eOCx+aMNZHuyvQ/WcQ67xR39V3DwFaIcodOqkmOfEHaYZTluiMPxkhJfBtxOGh7kNkJxJJGOoDJ46uQ2cnrei9PGqHMjtxLRUVDkPkpZGU8mHS8+bhNKGXGrbwQHBmPSLN7iuuRaCi0ZG2ANJFD3zNXCWv0k5s0RgdDDRFIngqJZduNdZDrfzEF9LWL8+S3sD2ZfTSo4Yts3lT5CXLJEbYe6qh/L989FzTUshIf6cyud7or9uMTB86IcXw3iIq+EguBFFZZf/SYpD3enOk5MTTtkfF+dbpWOxhdL/cLE=
