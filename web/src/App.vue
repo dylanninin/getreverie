@@ -1,23 +1,34 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+    <LayoutHeader></LayoutHeader>
+    <div class="container">
+      <router-view class="view"></router-view>
+    </div>
+    <LayoutFooter></LayoutFooter>
   </div>
 </template>
 
 <script>
+import LayoutHeader from './views/LayoutHeader'
+import LayoutFooter from './views/LayoutFooter'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    LayoutHeader,
+    LayoutFooter
+  }
 }
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.view {
+  min-height: 400px;
+  padding-bottom: 50px;
 }
 </style>

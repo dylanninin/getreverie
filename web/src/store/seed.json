@@ -1,0 +1,51 @@
+{
+  "category": {
+    "id": 1,
+    "title": "Any Category",
+    "icon": "♫"
+  },
+  "story": {
+    "id": 1,
+    "title": "dylanninin",
+    "description": "Email digest of dylanninin",
+    "logo": "https://s3.amazonaws.com/revue/profiles/images/000/015/924/thumb/photo.jpg?1470883964",
+    "statistics": {
+      "subscribers_count": 1024,
+      "issues_count": 13
+    },
+    "socials": [
+      {
+        "name": "twitter",
+        "url": "https://twitter.com/dylanninin"
+      },
+      {
+        "name": "facebook",
+        "url": "https://facebook.com/dylanninin"
+      }
+    ]
+  },
+  "issue": {
+    "id": 1,
+    "no": 1,
+    "logo": "https://s3.amazonaws.com/revue/profiles/images/000/015/924/thumb/photo.jpg?1470883964",
+    "date": "2016-12-11",
+    "title": "GIF",
+    "excerpt": "The Graphics Interchange Format is a bitmap image format",
+    "author": "Dylanninin",
+    "description": "Email digest of dylanninin",
+    "item":
+      {
+        "id": 1,
+        "type": "section",
+        "title": "The GIF is dead. Long Live the GIF.",
+        "content": "The GIF as an art form—a short and silent loop—has never been more popular than it is right now. Yet the GIF as a filetype, the way we store the library of ones and zeros that computers translate into animation, is quietly embattled. Behind the scenes, a war to exterminate it has been raging for years, and it never really ended. All these years after Burn All GIFs Day, the GIF remains both deeply flawed and yet strangely irreplaceable. Whether this latest frenzy of GIF popularity enshrines it forever or kills it for good, you can be damn sure we’ll never see anything quite like it again.",
+        "url": "http://www.popularmechanics.com/technology/a21457/the-gif-is-dead-long-live-the-gif",
+        "url_share": "#",
+        "nav_img": null
+      }
+  },
+  "author": {
+    "id": 1,
+    "name": "Dylanninin"
+  }
+}
